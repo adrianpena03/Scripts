@@ -1,6 +1,6 @@
 # Cyphers / encryption algorithms
 
-# Implement a cypher which converts text to emoji or something.
+# Implement a cypher which converts text to something.
 # Be able to implement basic cyphers.
 
 
@@ -31,6 +31,7 @@ dict = {
 user_input = input("Look at dictionary, input what you want to receive as output based on input. ")
 sep = user_input.split(' ')
 
+output = ''
 for word in sep:
-    print(dict.get(word, word), end=' ')
-
+    output += dict.get(word, word)
+print(output)
