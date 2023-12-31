@@ -33,5 +33,5 @@ sep = user_input.split(' ')
 
 output = ''
 for word in sep:
-    output += dict.get(word, word)
+    output += dict.get(word, word) + ' '
 print(output)
