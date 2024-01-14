@@ -1,1 +1,1 @@
-# Scripts - Preparing for Google
+# Python Scripts - Practicing scripting in python for security
