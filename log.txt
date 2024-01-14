@@ -1,0 +1,35 @@
+Date/Time:        2024-01-13 02:26:15.468 -0500
+End time:         2024-01-13 02:31:00.613 -0500
+OS Version:       macOS 14.2.1 (Build 23C71)
+Architecture:     arm64e
+Report Version:   44
+
+Data Source:      Microstackshots
+
+Command:          Brave Browser Helper (GPU)
+Path:             /Applications/Brave Browser.app/Contents/Frameworks/Brave Browser Framework.framework/Versions/120.1.61.114/Helpers/Brave Browser Helper (GPU).app/Contents/MacOS/Brave Browser Helper (GPU)
+Identifier:       com.brave.Browser.helper
+Version:          120.1.61.114 (161.114)
+Is First Party:   No
+Resource Coalition ID: 577
+Architecture:     arm64
+PID:              723
+
+Event:            wakeups
+Action taken:     none
+Wakeups:          45001 wakeups over the last 285 seconds (158 wakeups per second average), exceeding limit of 150 wakeups per second over 300 seconds
+Wakeups limit:    45000
+Limit duration:   300s
+Wakeups caused:   45001
+Wakeups duration: 285s
+Duration:         285.14s
+Duration Sampled: 247.29s
+Steps:            11
+
+Hardware model:   MacBookPro
+Active cpus:      8
+HW page size:     16384
+VM page size:     16384
+
+Fan speed:        0 rpm
+OS Cryptex File Extents: 1

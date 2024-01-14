@@ -18,16 +18,16 @@ if response.status_code == 200:
     soup = BeautifulSoup(response.text, 'html.parser')
 
     # EXTRACT LINKS CODE
-    #links = soup.find_all('a')
+    links = soup.find_all('a')
     # Print the links
-    #for link in links:
-        #print(link.get('href'))
+    for link in links:
+        print(link.get('href'))
     
     # EXTRACT PARAGRAPH TEXT
-    paragraphs = soup.find_all('p')
-    print("Paragraphs:")
-    for paragraph in paragraphs:
-            print(paragraph.get_text())
+    # paragraphs = soup.find_all('p')
+    # print("Paragraphs:")
+    # for paragraph in paragraphs:
+    #         print(paragraph.get_text())
 
 else:
     print(f"Failed to retrieve the webpage. Status code: {response.status_code}")
