@@ -27,3 +27,14 @@ End_time = log_data.get('End time')
 
 print("Date/Time:", date_time)
 print("End time:", End_time)
+
+# ------ Second Version bc why not -------
+
+# with open('log.txt', 'r') as f:
+#     new_txt = [line.strip().split(':', 1)for line in f]
+
+#     for line in new_txt:
+#         if 'Date/Time' in line:
+#             print('Date/Time:', line[1].strip())
+#         elif 'End time' in line:
+#             print('End time', line[1].strip())
