@@ -9,7 +9,6 @@ Data Source:      Microstackshots
 Command:          Brave Browser Helper (GPU)
 Path:             /Applications/Brave Browser.app/Contents/Frameworks/Brave Browser Framework.framework/Versions/120.1.61.114/Helpers/Brave Browser Helper (GPU).app/Contents/MacOS/Brave Browser Helper (GPU)
 Identifier:       com.brave.Browser.helper
-Version:          120.1.61.114 (161.114)
 Is First Party:   No
 Resource Coalition ID: 577
 Architecture:     arm64
