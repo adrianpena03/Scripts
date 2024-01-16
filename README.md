@@ -1,1 +1,1 @@
-# Python Scripts - Practicing scripting in python for security
+# Python Scripts - Practicing scripting in python
