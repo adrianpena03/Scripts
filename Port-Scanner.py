@@ -29,7 +29,7 @@ print(portScanner(host, port))
 # ------ Second Version ------
 
 # ask user what host they want to scan
-# as user a range of ports they want to scan (between 1-5 or 23-32)
+# as user a range of ports they want to scan (ex. between 1-5 or 23-32)
 
 # start function called secondPortScanner(), takes in the 2 numbers from port ranges
 # check if the user input is a correct IP address, if not then say enter valid one
