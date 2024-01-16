@@ -27,9 +27,13 @@ def portScanner(host, port):
 print(portScanner(host, port))
 
 # ------ Second Version ------
+import datetime as dt
+curr_time = dt.datetime.now()
+
 
 # ask user what host they want to scan
 # as user a range of ports they want to scan (ex. between 1-5 or 23-32)
+# Get current time (this will be subtracted to the time after the code finishes to get total time taken to run the script)
 
 # start function called secondPortScanner(), takes in the 2 numbers from port ranges
 # check if the user input is a correct IP address, if not then say enter valid one
