@@ -52,6 +52,8 @@ port2 = int(input("Enter the second valid port you'd like to see is open/closed:
 def secondPortScanner(host, port1, port2):
     numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     host_split = int(host.split('.'))
+
+    # Check if user inputed valid IP
     for num in host_split:
         if num not in numbers:
             return 'Enter a valid IP address.'
@@ -60,5 +62,7 @@ def secondPortScanner(host, port1, port2):
         else:
             return 'Your IP is valid. Comtinuing program ...'
     
+    # Check if user inputed valid ports (between ranges 0 - 1023)
+    pass
 
 print(secondPortScanner(host, port1, port2))
