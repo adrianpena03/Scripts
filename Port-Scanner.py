@@ -61,5 +61,4 @@ def secondPortScanner(host, port1, port2):
             return 'Your IP is valid. Comtinuing program ...'
     
 
-
 print(secondPortScanner(host, port1, port2))
