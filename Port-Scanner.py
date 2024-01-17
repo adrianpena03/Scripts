@@ -63,9 +63,6 @@ def secondPortScanner(host, port1):
     ip_parts = host.split('.')
     if len(ip_parts) != 3 or any(part not in numbers or not 0 <= int(part) <= 255 for part in ip_parts):
         return 'Enter a valid IP address.'
-    # Validate port1
-    if not 0 <= port1 <= 1023:
-        return 'Enter a valid port number in the range of 0 and 1023 for port #1.'
 
     print('Your IP is valid. Continuing program...')
     
