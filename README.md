@@ -1,1 +1,1 @@
-# Python Scripts - Practicing scripting in python
+# Python Scripts - Practicing Scripting in Python
