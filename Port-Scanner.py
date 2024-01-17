@@ -46,8 +46,10 @@ import socket
 socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 host = input("Enter a valid host IP address: ")
+port1 = int(input('Enter valid port number in range of 0 and 1023 for port #1: '))
 
-def secondPortScanner(host, port1, port2):
+
+def secondPortScanner(host, port1):
     numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     host_split = int(host.split('.'))
 
@@ -61,19 +63,31 @@ def secondPortScanner(host, port1, port2):
             return 'Your IP is valid. Comtinuing program ...'
     
     # Check if user inputed valid ports (between ranges 0 - 1023)
-    
-    
-    ask_port2 = input("Do you want to include a range of ports to scan? Y/n")
-    if 'y' or 'yes' in ask_port2.lower():
-        port2 = int(input('Enter valid port number in range of 0 and 1023 for port #2.'))
-        if port2 < port1 or port2 > 1023:
-            return 'Port number 2 should be greater than the value of port 1 and less than 1023.'
+    if port1 < 0 or port1 > 1023:
+        return 'Enter a port number in the ranges of 0 and 1023.'
+    else:
+        print("\n---Continuing program---\n")
+        ask_port2 = input("Do you want to include a range of ports to scan? Y/n")
+        if 'y' or 'yes' in ask_port2.lower():
+            port2 = int(input('Enter valid port number in range of 0 and 1023 for port #2.'))
+            if port2 <= port1 or port2 > 1023:
+                return 'Port number 2 should be greater than the value of port 1 and less than 1023.'
+            port2 = ask_port2
 
-        # start scanning?
-    
-    elif 'n' or 'no' in ask_port2.lower():
-        if port1 < 0 or port1 > 1023:
-            return 'Enter a port number in the ranges of 0 and 1023.'
-    
+            # start scanning for range of port1 to port2
+            print("\nScanning ports...\n")
+            for i in range(port1, port2 + 1):
+                if socket.connect_ex((host, i)):
+                    print(f'Port {i} is closed.')
+                else: 
+                    print(f'Port {i} is open.')
 
+        if 'n' or 'no' in ask_port2.lower():
+            print("Scanning with only one port.")
+            if socket.connect_ex((host, port1)):
+                return f'Port {port1} is closed.'
+            else: # If not error code, then port is open
+                return f'Port {port1} is open.'
+    
+print(secondPortScanner(host, port1))
 # Next steps: Fix logic for ports. Also, either make port int definition outside or inside function.
