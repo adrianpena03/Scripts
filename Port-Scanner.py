@@ -80,11 +80,11 @@ def secondPortScanner(host, port1):
 
             # start scanning for range of port1 to port2
             print("\nScanning ports...\n")
-            for i in range(port1, port2 + 1):
-                if socket.connect_ex((host, i)):
-                    print(f'Port {i} is closed.')
+            for port_num in range(port1, port2 + 1):
+                if socket.connect_ex((host, port_num)):
+                    print(f'Port {port_num} is closed.')
                 else: 
-                    print(f'Port {i} is open.')
+                    print(f'Port {port_num} is open.')
 
         if 'n' or 'no' in ask_port2.lower():
             print("Scanning with only one port.")
