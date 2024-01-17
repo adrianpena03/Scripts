@@ -49,21 +49,28 @@ host = input("Enter a valid host IP address: ")
 port1 = int(input('Enter valid port number in range of 0 and 1023 for port #1: '))
 
 
-def secondPortScanner(host, port1):
-    numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-    host_split = int(host.split('.'))
+"""
 
-    # Check if user inputed valid IP
-    for num in host_split:
-        if num not in numbers:
-            return 'Enter a valid IP address.'
-        if len(host_split) < 12 or len(host_split) > 12:
-            return 'Check amount of numbers in IP'
-        else:
-            return 'Your IP is valid. Comtinuing program ...'
+
+WORK IN PROGRESS
+
+
+"""
+
+def secondPortScanner(host, port1):
+    numbers = [str(i) for i in range(10)]
+    # Validate IP address
+    ip_parts = host.split('.')
+    if len(ip_parts) != 3 or any(part not in numbers or not 0 <= int(part) <= 255 for part in ip_parts):
+        return 'Enter a valid IP address.'
+    # Validate port1
+    if not 0 <= port1 <= 1023:
+        return 'Enter a valid port number in the range of 0 and 1023 for port #1.'
+
+    print('Your IP is valid. Continuing program...')
     
     # Check if user inputed valid ports (between ranges 0 - 1023)
-    if port1 < 0 or port1 > 1023:
+    if not 0 <= port1 <= 1023:
         return 'Enter a port number in the ranges of 0 and 1023.'
     else:
         print("\n---Continuing program---\n")
